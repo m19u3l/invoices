@@ -26,6 +26,7 @@ export const useData = () => {
   const taxRate = useGetValue("tax");
   const items = useItemParams();
 
+  const disablePaymentDetails = useGetValue("disablePaymentDetails");
   const bankName = useGetValue("bankName");
   const accountNumber = useGetValue("accountNumber");
   const accountName = useGetValue("accountName");
@@ -60,7 +61,8 @@ export const useData = () => {
     routingCode: routingCode,
     swiftCode: swiftCode,
     ifscCode: ifscCode,
-    currency
+    currency,
+    disablePaymentDetails: disablePaymentDetails as any as boolean,
   };
 
   const yourDetails = {
